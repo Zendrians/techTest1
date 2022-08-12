@@ -1,17 +1,36 @@
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PokeballSVG from "../../../../assets/reactSVG/PokeBall";
+import { users } from "../../../../data/users";
+import { Credentials } from "../../../../types/credentials";
+import { validateUser } from "../../../../utils/userValidator";
 import { validateEmail, validatePassword } from "../../../../utils/validations";
 import "./loginBox.scss";
 
 const LoginBox: React.FC = () => {
-  const [isSubmited, setIsSubmitted] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  //   const [isSubmited, setIsSubmitted] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("zendrian@gmail.com");
+  const [password, setPassword] = useState<string>("12345");
+  const navigate = useNavigate();
 
   const onSubmit = () => {
-    setIsSubmitted(true);
+    const logCredentials: Credentials = {
+      email: email,
+      password: btoa(password),
+    };
+
+    const isRegisteredUser = validateUser(logCredentials);
+
+    if (isRegisteredUser) {
+      console.log("Success");
+      localStorage.setItem("currentUser", JSON.stringify(logCredentials));
+      navigate("/home");
+      return;
+    }
+    console.log("Failed");
+    return;
   };
 
   const handleUserMail = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,13 +49,10 @@ const LoginBox: React.FC = () => {
       <div className="loginBox--inputBox">
         <TextField
           value={email}
-          //   error={isSubmited ? true : false}
           required
           type="email"
           onChange={handleUserMail}
           label="User Mail"
-          //   helperText="Plese enter a valid email."
-          //   defaultValue="Daniel"
         />
         <TextField
           value={password}
