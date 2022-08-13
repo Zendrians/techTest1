@@ -6,7 +6,6 @@ const LoginLayout: React.FC = () => {
   return (
     <main className="loginLayout">
       <LoginBox />
-      
     </main>
   );
 };

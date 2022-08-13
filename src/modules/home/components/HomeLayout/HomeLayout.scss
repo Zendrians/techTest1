@@ -1,0 +1,17 @@
+.homeLayout {
+  display: grid;
+  grid-template-rows: 1fr 80px;
+  height: 100vh;
+  width: 100vw;
+  place-items: center;
+  background: #ff9966;
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  overflow: hidden;
+
+  &--pklist {
+    height: 100%;
+    display: grid;
+    place-content: center;
+  }
+}

@@ -1,7 +1,8 @@
 import React from "react";
+import HomeLayout from "../components/HomeLayout/HomeLayout";
 
 const HomeContainer: React.FC = () => {
-  return <div>Home container</div>;
+  return <HomeLayout />;
 };
 
 export default HomeContainer;

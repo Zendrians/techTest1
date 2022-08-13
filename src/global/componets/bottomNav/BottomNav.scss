@@ -1,0 +1,21 @@
+.bottomNav {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  place-items: center;
+  height: 50px;
+  background-color: white;
+  width: 800px;
+  border-radius: 30px;
+
+  &--divider {
+    height: 40px;
+    width: 1px;
+    background-color: rgba(128, 128, 128, 0.356);
+    border: none;
+    margin: 0;
+  }
+
+  &--navLink {
+    font-family: 'Roboto', sans-serif;
+  }
+}
