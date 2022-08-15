@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import {
   addToFavList,
   getFavListFromStorage,
+  removeFromFavList,
 } from "../../../../utils/favListStorage";
 
 interface IPkTile {
@@ -18,8 +19,12 @@ const PkTile: React.FC<IPkTile> = ({ pk }) => {
   const [isPkFav, setIsPkFav] = useState<boolean>(isPkInFavList());
 
   const handleFavBtnPress = () => {
-    addToFavList(pk);
-    // console.log(getFavListFromStorage());
+    if (isPkFav) {
+      removeFromFavList(pk);
+    } else {
+      addToFavList(pk);
+    }
+    setIsPkFav(!isPkFav);
   };
 
   function isPkInFavList(): boolean {
