@@ -10,7 +10,6 @@ interface IPkList {
 
 const PkList: React.FC<IPkList> = ({ pks }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  // const [currentPosition, setCurrentPoistion] = useState<number>(0);
 
   const totalPageNum = Math.ceil((pks.length + 1) / 20);
   const indexOfLastPk = currentPage * 20;

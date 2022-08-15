@@ -6,6 +6,7 @@ export interface Pokedex {
 }
 
 export interface Pk {
+  id: number;
   name: string;
   url: string;
   frontSprite?: string;

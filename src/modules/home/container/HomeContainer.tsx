@@ -1,5 +1,4 @@
 import axios from "axios";
-import { url } from "inspector";
 import React, { useEffect, useState } from "react";
 import { Pk } from "../../../types/pks";
 import HomeLayout from "../components/HomeLayout/HomeLayout";
@@ -21,6 +20,7 @@ const HomeContainer: React.FC = () => {
           frontSprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
             i + 1
           }.png`,
+          id: i + 1,
         };
       });
       console.log(pks);
