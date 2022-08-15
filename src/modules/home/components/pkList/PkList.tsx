@@ -19,7 +19,7 @@ const PkList: React.FC<IPkList> = ({ pks }) => {
     event: React.ChangeEvent<unknown>,
     value: number
   ) => {
-    console.log(value);
+    // console.log(value);
     setCurrentPage(value);
   };
 

@@ -24,12 +24,11 @@ const LoginBox: React.FC = () => {
     const isRegisteredUser = validateUser(logCredentials);
 
     if (isRegisteredUser) {
-      console.log("Success");
       localStorage.setItem("currentUser", JSON.stringify(logCredentials));
       navigate("/home");
       return;
     }
-    console.log("Failed");
+
     return;
   };
 

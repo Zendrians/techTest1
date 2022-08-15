@@ -23,7 +23,7 @@ const DetailsContainer: React.FC = () => {
     }
   }, []);
 
-  console.log(pkDetails);
+  // console.log(pkDetails);
   if (!pkDetails) return <div></div>;
 
   return <DetailsLayout pkDetails={pkDetails} />;
