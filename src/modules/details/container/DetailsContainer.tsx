@@ -24,8 +24,9 @@ const DetailsContainer: React.FC = () => {
   }, []);
 
   console.log(pkDetails);
+  if (!pkDetails) return <div></div>;
 
-  return <DetailsLayout />;
+  return <DetailsLayout pkDetails={pkDetails} />;
 };
 
 export default DetailsContainer;
