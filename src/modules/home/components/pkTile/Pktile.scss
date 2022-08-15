@@ -11,6 +11,26 @@
   grid-template-columns: 110px 1fr;
   place-items: center;
 
-  &--sprite {
+  &--infoBox {
+    display: grid;
+    grid-template-rows: 46px 1fr;
+    row-gap: 4px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &--pkName {
+    padding-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  &--iconBox {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 26px);
+    column-gap: 6px;
   }
 }
