@@ -15,7 +15,7 @@ const PkList: React.FC<IPkList> = ({ pks }) => {
     return slicedArr.map((pk, i) => <PkTile key={`${i}${pk.name}`} pk={pk} />);
   };
 
-  return <div className="pkList">{renderTiles()}</div>;
+  return <ol className="pkList">{renderTiles()}</ol>;
 };
 
 export default PkList;

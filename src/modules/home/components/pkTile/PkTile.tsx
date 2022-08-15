@@ -7,7 +7,19 @@ interface IPkTile {
 }
 
 const PkTile: React.FC<IPkTile> = ({ pk }) => {
-  return <div className="pkTile">{pk.name}</div>;
+  return (
+    <li className="pkTile">
+      <img
+        className="pkTile--sprite"
+        src={pk.frontSprite}
+        alt="pokemon sprite"
+      />
+      <div className="pkTile--infoBox">
+        <h6>{pk.name}</h6>
+        <div></div>
+      </div>
+    </li>
+  );
 };
 
 export default PkTile;
