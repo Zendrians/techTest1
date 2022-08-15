@@ -1,0 +1,6 @@
+.favoritesLayout {
+  display: grid;
+  grid-template-rows: 1fr 70px;
+  height: 100vh;
+  place-items: center;
+}
