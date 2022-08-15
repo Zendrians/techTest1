@@ -1,3 +1,4 @@
+import { light } from "@mui/material/styles/createPalette";
 import React from "react";
 import { PkDetails } from "../../../../types/pkDetails";
 import "./DetailsBox.scss";
@@ -13,6 +14,12 @@ const DetailsBox: React.FC<IDetailsBox> = ({ pkDetails }) => {
     ));
   };
 
+  const generateAbilities = () => {
+    return pkDetails.abilities.map((ability) => (
+      <li>• {ability.ability.name}</li>
+    ));
+  };
+
   return (
     <div className="detailsBox">
       <div className="detailsBox--spriteBox">
@@ -23,7 +30,7 @@ const DetailsBox: React.FC<IDetailsBox> = ({ pkDetails }) => {
       <div className="detailsBox--typeBox">
         {generateTypes()} <span className="detailsBox--type">pokemon</span>
       </div>
-      <div></div>
+      <ul className="detailsBox--skillListBox">{generateAbilities()}</ul>
     </div>
   );
 };
