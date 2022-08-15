@@ -33,4 +33,8 @@
     grid-template-columns: repeat(2, 26px);
     column-gap: 6px;
   }
+
+  &--favBtn {
+    display: grid;
+  }
 }

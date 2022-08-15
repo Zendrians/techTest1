@@ -9,14 +9,14 @@ interface IDetailsBox {
 
 const DetailsBox: React.FC<IDetailsBox> = ({ pkDetails }) => {
   const generateTypes = () => {
-    return pkDetails.types.map((type) => (
-      <span className="detailsBox--type">{type.type.name}</span>
+    return pkDetails.types.map((type, i) => (
+      <span key={i} className="detailsBox--type">{type.type.name}</span>
     ));
   };
 
   const generateAbilities = () => {
-    return pkDetails.abilities.map((ability) => (
-      <li>• {ability.ability.name}</li>
+    return pkDetails.abilities.map((ability, i) => (
+      <li key={i}>• {ability.ability.name}</li>
     ));
   };
 

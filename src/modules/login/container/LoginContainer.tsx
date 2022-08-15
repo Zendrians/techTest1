@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Credentials } from "../../../types/credentials";
 import { validateUser } from "../../../utils/userValidator";
-import LoginLayout from "../container/loginLayout/LoginLayout";
+import LoginLayout from "../components/loginLayout/LoginLayout";
 
 const LoginContainer: React.FC = () => {
   const navigate = useNavigate();
