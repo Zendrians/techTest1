@@ -23,7 +23,7 @@ const HomeContainer: React.FC = () => {
           id: i + 1,
         };
       });
-      console.log(pks);
+      // console.log(pks);
       setPkArray(pks);
     };
     try {

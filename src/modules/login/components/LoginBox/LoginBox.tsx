@@ -10,7 +10,6 @@ import { validateEmail, validatePassword } from "../../../../utils/validations";
 import "./loginBox.scss";
 
 const LoginBox: React.FC = () => {
-  //   const [isSubmited, setIsSubmitted] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("zendrian@gmail.com");
   const [password, setPassword] = useState<string>("12345");
   const navigate = useNavigate();
